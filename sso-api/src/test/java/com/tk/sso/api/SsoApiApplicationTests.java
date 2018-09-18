@@ -3,6 +3,7 @@ package com.tk.sso.api;
 
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.tk.sso.api.test.ConfigProperties;
 import com.tk.sso.api.test.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,10 +17,12 @@ public class SsoApiApplicationTests {
 
     @Autowired
     private Person person;
+    @Autowired
+    private ConfigProperties configProperties;
 
     @Test
     public void propsTest() throws JsonProcessingException {
-        System.out.println("simpleProp: " + JSON.toJSONString(person));
+        System.out.println("simpleProp: " + JSON.toJSONString(configProperties));
 
 //        ObjectMapper objectMapper =;
 //        System.out.println("arrayProps: " + objectMapper.writeValueAsString(myProps.getArrayProps()));
